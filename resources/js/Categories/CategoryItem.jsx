@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import Box from '@mui/material/Box';
+import Link from '@mui/material/Link';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
@@ -43,8 +44,8 @@ export default function CategoryItem({ category, deleteCategory, editCategory}) 
 
     return (
         <div key={category.id}>
-            <span>{category.title}</span>
-            <button id={category.id} onClick={deleteCategory}>☓</button>
+            <Link underline="none" color="green" href={`./yuy/${category.id}`}>{category.title}</Link>
+            <Button id={category.id} onClick={deleteCategory}>☓</Button>
             <Button onClick={handleOpen}>Edit</Button>
             <Modal
                 open={open}

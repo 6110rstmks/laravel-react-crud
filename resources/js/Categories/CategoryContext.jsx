@@ -1,3 +1,3 @@
-const CategoryProvider = {{children} => {
+// const CategoryProvider = {{children} => {
     
-}}
+// }}
