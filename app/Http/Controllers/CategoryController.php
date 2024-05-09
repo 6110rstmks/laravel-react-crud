@@ -11,7 +11,6 @@ class CategoryController extends Controller
 {
     public function index()
     {
-        Log::debug('li');
         return Category::latest()->get();
     }
 
