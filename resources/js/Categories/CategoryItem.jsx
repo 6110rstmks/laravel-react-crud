@@ -42,9 +42,14 @@ export default function CategoryItem({ category, deleteCategory, editCategory}) 
         p: 4,
     };
 
+    const fetchCategory = async () => {
+        const tmpCategories = await axios.get('/api/category/{category.id}')
+        // setCategories(tmpCategories.data)
+    }
+
     return (
         <div key={category.id}>
-            <Link underline="none" color="green" href={`./yuy/${category.id}`}>{category.title}</Link>
+            <Link underline="none" color="green" href={`./category/${category.id}`} onClick={fetchCategory}>{category.title}</Link>
             <Button id={category.id} onClick={deleteCategory}>☓</Button>
             <Button onClick={handleOpen}>Edit</Button>
             <Modal
