@@ -14,6 +14,10 @@ use App\Http\Controllers\CategoryController;
 */
 
 Route::get('/', function () {
+    return view('home');
+});
+
+Route::get('/categories', function () {
     return view('categories');
 });
 

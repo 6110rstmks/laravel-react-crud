@@ -1,8 +1,8 @@
 import { useState, useEffect} from 'react'
 import axios from "axios"
 import {Link} from "react-router-dom";
-import CategoryCreate from '../Categories/CategoryCreate'
-import CategoryItems from '../Categories/CategoryItems'
+import CategoryCreate from './Categories/CategoryCreate'
+import CategoryItems from './Categories/CategoryItems'
 
 function Home() {
 
@@ -49,17 +49,12 @@ function Home() {
             <div className="row justify-content-center">
                 <div className="col-md-8">
                     <div className="card">
-                        <div className="card-header">Recipehouse</div>
+                        <div className="card-header">Questionアプリ</div>
 
                         {/* <Link to={'/page'} className="btn btn-primary">Pageへ遷移</Link> */}
                     </div>
                     <CategoryCreate addCategory={addCategory}></CategoryCreate>
-
-                    {/* <ul>{CategoryItems}</ul> */}
-                    <CategoryItems categories={categories}
-                        deleteCategory={deleteCategory}
-                        editCategory={editCategory}
-                        />
+                    <a href="./categories">カテゴリ一覧へ</a>
                 </div>
             </div>
         </div>

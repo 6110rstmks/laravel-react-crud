@@ -11,6 +11,6 @@
     <div class="container" id="app">
     </div>
     @viteReactRefresh
-    @vite(['resources/js/Categories/Categories.jsx'])
+    @vite(['resources/js/Home/app.jsx'])
 </body>
 </html>

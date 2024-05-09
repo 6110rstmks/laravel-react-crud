@@ -5,18 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-
-class Category extends Model
+class Question extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'name',
+        'title',
+        'description',
+        'file_path',
     ];
 
-    public function recipes()
+    public function categories()
     {
-        return $this->hasMany(Subcategory::class);
+        return $this->belongsToMany(Subcategory::class);
     }
-
 }
